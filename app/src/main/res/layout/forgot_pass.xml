@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:background="@color/yellow"
+                android:padding="10dp"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:textAppearanceMedium"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:inputType="textEmailAddress"
+                android:drawableStart="@android:drawable/sym_action_email"
+                android:padding="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:drawablePadding="15dp"
+                android:textColor="@color/white"
+                android:hint="Email"
+                android:fontFamily="@font/rockwell"
+                android:background="@drawable/edittext_back"
+                android:layout_margin="10dp"
+                android:textSize="15dp"
+                android:id="@+id/forpassemail_et"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="Reset Password"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/white"
+                android:layout_margin="10dp"
+                android:padding="7dp"
+                android:id="@+id/forpass_bt"
+                android:background="@drawable/button_back"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

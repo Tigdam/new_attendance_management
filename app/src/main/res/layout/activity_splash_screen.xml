@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background"
+    tools:context=".SplashScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ncrd_sterling_institute_of_management_studies"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#004500"
+            android:textSize="26sp"
+            android:fontFamily="@font/rockwell"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logo_background1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/logo"
+                android:transitionName="logo_image"
+                />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student Attendance"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:shadowColor="#000000"
+            android:alpha="0.8"
+            android:shadowDx="0"
+            android:fontFamily="@font/jost"
+            android:shadowDy="4"
+            android:shadowRadius="5"
+            android:transitionName="logo_text" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bel_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:layout_above="@+id/i"
+        android:gravity="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:text="Loading..."/>
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/i"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dimen_30"
+            app:indicatorColor="@android:color/white"
+            app:indicatorName="BallPulseIndicator" />
+</RelativeLayout>

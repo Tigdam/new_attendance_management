@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/okk"
+    android:orientation="vertical"
+    tools:context=".factakeatn_midpage">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@android:color/holo_green_light">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_add"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Date and Class"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+        <Spinner
+            android:id="@+id/spinnerselsub"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edittext_back"/>
+
+        <TextView
+            android:drawableLeft="@drawable/calender_black_icon"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#2B2727"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:background="@drawable/edittext_back"
+            android:drawablePadding="6dp"
+            android:id="@+id/date_et"
+            android:hint="Select Date"/>
+
+        <Spinner
+            android:id="@+id/spinnerattenvalue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edittext_back"/>
+
+        <Button
+            android:id="@+id/takeatenmid_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Click to Proceed"
+            android:layout_marginTop="20dp"
+            android:textColor="#070707"
+            android:background="@drawable/button_back"/>
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

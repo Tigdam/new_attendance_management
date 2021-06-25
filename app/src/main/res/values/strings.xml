@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">New_attendance_management</string>
+    <string name="choose_your_login">Choose Your Login</string>
+    <string name="faculty">Faculty</string>
+    <string name="admin">Admin</string>
+    <string name="sign_in">Sign In</string>
+    <string name="email_id">EMail ID</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="login">Login</string>
+    <string name="ncrd_sterling_institute_of_management_studies">NCRD Sterling Institute of Management Studies</string>
+    <string name="title_activity_admin_mainpage">admin_mainpage</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_addfaculty">addfaculty</string>
+    <string name="title_activity_facultydashboard">facultydashboard</string>
+
+    <string name="okk">
+
+
+    </string>
+
+    <string-array name="array_class">
+        <item>Select Class</item>
+        <item>FYMCA</item>
+        <item>SYMCA</item>
+        <item>TYMCA</item>
+    </string-array>
+</resources>
