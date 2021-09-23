@@ -1,8 +1,5 @@
 package com.example.new_attendance_management.ManageStudent;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,14 +9,15 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.new_attendance_management.Faculty;
 import com.example.new_attendance_management.FirebaseDatabaseHelper;
 import com.example.new_attendance_management.R;
 import com.example.new_attendance_management.Student;
-import com.example.new_attendance_management.UpdateDeleteFaculty;
 import com.example.new_attendance_management.batchdetails;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -33,7 +31,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
+import java.util.Objects;
 
 public class StudentModification extends AppCompatActivity {
 
@@ -52,9 +50,12 @@ public class StudentModification extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_modification);
+
         mProgress=new ProgressDialog(this);
         mAuth= FirebaseAuth.getInstance();
         databaseStudent= FirebaseDatabase.getInstance().getReference("Student");
+        //databaseStudent= FirebaseDatabase.getInstance().getReference("AllStudent");
+
         batchdetails=FirebaseDatabase.getInstance().getReference("Batchdetails");
         dbbatchname=FirebaseDatabase.getInstance().getReference("BatchName");
         StnName=findViewById(R.id.stdname_et);
@@ -68,6 +69,7 @@ public class StudentModification extends AppCompatActivity {
         mProgress.setMessage("Please wait...");
         mProgress.setCanceledOnTouchOutside(false);
         mProgress.show();
+
         Spinner spinner1 = (Spinner) findViewById(R.id.spinner1);
         //Spinner for batchname
         final List<String> lstbacthn=new ArrayList<String>();
@@ -289,6 +291,27 @@ public class StudentModification extends AppCompatActivity {
                                             }
                                         }
                                     });
+
+                                    FirebaseDatabase.getInstance().getReference("AllStudent")
+                                            .child(Objects.requireNonNull(FirebaseAuth.getInstance().getUid()))
+                                            .setValue(batchs).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            if(task.isSuccessful()){
+                                                Toast.makeText(StudentModification.this, "User has been registered successfully", Toast.LENGTH_SHORT).show();
+
+                                            }
+                                            else {
+                                                if(task.isSuccessful()){
+                                                    Toast.makeText(StudentModification.this, "Failed to registered ", Toast.LENGTH_SHORT).show();
+
+                                                }
+
+                                            }
+                                        }
+                                    });
+
+
                                 } else {
                                     mProgress.dismiss();
                                     Toast.makeText(getApplicationContext(), "Failed...", Toast.LENGTH_LONG).show();

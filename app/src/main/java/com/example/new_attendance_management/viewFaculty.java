@@ -1,23 +1,18 @@
 package com.example.new_attendance_management;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.new_attendance_management.R;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
 public class viewFaculty extends AppCompatActivity {
 
-    private RecyclerView mRecyclerView;
+    private RecyclerView  mRecyclerView;
     private Button addbtn;
 
     @Override

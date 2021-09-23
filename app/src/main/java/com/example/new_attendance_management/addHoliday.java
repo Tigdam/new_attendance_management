@@ -1,6 +1,5 @@
 package com.example.new_attendance_management;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,7 +18,7 @@ import java.util.Map;
 
 public class addHoliday extends AppCompatActivity {
 
-    EditText holidayTo ,holidayFrom, holidayDes;
+    EditText holidayTo ,holidayFrom, holidayDes, holidaytitle;
     Button submit,back;
 
     @Override
@@ -27,18 +26,18 @@ public class addHoliday extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_holiday);
 
-        holidayTo=(EditText)findViewById(R.id.editTextTextPersonName);
-        holidayFrom=(EditText)findViewById(R.id.editTextTextPersonName2);
-        holidayDes=(EditText)findViewById(R.id.editTextTextPersonName3);
+        holidayTo= findViewById(R.id.dateto);
+        holidayFrom= findViewById(R.id.datefrom);
+        holidayDes= findViewById(R.id.description);
+        holidaytitle= findViewById(R.id.TitleHoliday);
 
+//        back= findViewById(R.id.button2);
+//        back.setOnClickListener(view -> {
+//            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+//            finish();
+//        });
 
-        back=(Button)findViewById(R.id.button2);
-        back.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
-            finish();
-        });
-
-        submit=(Button)findViewById(R.id.button);
+        submit= findViewById(R.id.btn_save);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,6 +52,7 @@ public class addHoliday extends AppCompatActivity {
         map.put("HolidayTo",holidayTo.getText().toString());
         map.put("HolidayFrom",holidayFrom.getText().toString());
         map.put("HolidayDes",holidayDes.getText().toString());
+        map.put("HolidayTitle",holidaytitle.getText().toString());
 
         FirebaseDatabase.getInstance().getReference().child("students").push()
                 .setValue(map)
@@ -62,6 +62,7 @@ public class addHoliday extends AppCompatActivity {
                         holidayTo.setText("");
                         holidayFrom.setText("");
                         holidayDes.setText("");
+                        holidaytitle.setText("");
                         Toast.makeText(getApplicationContext(),"Inserted Successfully",Toast.LENGTH_LONG).show();
                     }
                 })

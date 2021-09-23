@@ -2,8 +2,158 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/p_holiday"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/student_back"
     tools:context=".student_dashbord">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile" />
+
+    <TextView
+        android:id="@+id/u_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:text="Username"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/profession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Student"
+        android:textColor="#090909"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/u_name" />
+
+    <ImageView
+        android:id="@+id/v_pubholiday"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="241dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:srcCompat="@drawable/public_holliday" />
+
+    <TextView
+        android:id="@+id/txt_notice5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="255dp"
+        android:text="Holidays"
+        android:textColor="#0B0A0A"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.631"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v_pubholiday" />
+
+    <ImageView
+        android:id="@+id/v_attendence"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="241dp"
+        android:layout_marginRight="241dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_notice5"
+        app:srcCompat="@drawable/view_attendance" />
+
+    <TextView
+        android:id="@+id/T_attendence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="255dp"
+        android:layout_marginRight="255dp"
+        android:text="View Attedence"
+        android:textColor="#0C0C0C"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v_attendence" />
+
+    <ImageView
+        android:id="@+id/v_leave"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/v_attendence"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/leave_application" />
+
+    <TextView
+        android:id="@+id/T_leave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Leave Application"
+        android:textColor="#131313"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.866"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v_leave" />
+
+    <ImageView
+        android:id="@+id/v_notice"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="113dp"
+        android:layout_marginEnd="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/v_attendence"
+        app:layout_constraintTop_toBottomOf="@+id/profession"
+        app:srcCompat="@drawable/sem1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:text="Notice"
+        android:textColor="#0B0A0A"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/T_attendence"
+        app:layout_constraintTop_toBottomOf="@+id/v_notice" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

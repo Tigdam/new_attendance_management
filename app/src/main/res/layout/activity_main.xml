@@ -96,7 +96,14 @@
             android:layout_marginRight="10dp"
             android:textColor="@color/white"
             android:background="@drawable/button_back"/>
-
+        <TextView
+            android:id="@+id/StudentSigninButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:text="Login as Student"
+            android:textColor="@android:color/white"
+            android:gravity="center" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

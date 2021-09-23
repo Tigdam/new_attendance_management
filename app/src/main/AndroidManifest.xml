@@ -12,7 +12,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".student_dashbord"></activity>
+        <activity
+            android:name=".viewLeave_Student"
+            android:exported="true" />
+        <activity
+            android:name=".viewNotice_Student"
+            android:exported="true" />
+        <activity
+            android:name=".viewHoilday_Student"
+            android:exported="true" />
+        <activity
+            android:name=".StudentLogin"
+            android:exported="true" />
+        <activity android:name=".student_dashbord" />
         <activity android:name=".disp_holiday" />
         <activity android:name=".addHoliday" />
         <activity android:name=".ManageStudent.StudentModification" />
@@ -52,8 +64,7 @@
         <activity
             android:name=".admin_mainpage"
             android:label="Admin"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity" />
     </application>
 

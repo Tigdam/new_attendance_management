@@ -38,6 +38,7 @@ import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView Student_Login;
     EditText username;
     TextInputLayout password;
     public Button loginbtn;
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         defaultAuth=FirebaseAuth.getInstance();
         redirectstate();
         FirebaseApp.initializeApp(this);
@@ -67,6 +69,12 @@ public class MainActivity extends AppCompatActivity {
         password = (TextInputLayout)findViewById(R.id.password_et);
         loginbtn= findViewById(R.id.loginButton);
         forpass_btn=findViewById(R.id.forgetpass_tv);
+
+        Student_Login = findViewById(R.id.StudentSigninButton);
+        Student_Login.setOnClickListener(v -> {
+            Intent intentt=new Intent(MainActivity.this,StudentLogin.class);
+            startActivity(intentt);
+        });
 
 
         forpass_btn.setOnClickListener(new View.OnClickListener() {
@@ -382,6 +390,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intentt);
             finish();
         }
+
 
 
     }
