@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".admin_settimetable"
+            android:exported="true" />
+        <activity
+            android:name=".viewLeaveApplication_ADMIN"
+            android:exported="true" />
+        <activity
             android:name=".viewLeave_Student"
             android:exported="true" />
         <activity

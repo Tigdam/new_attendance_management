@@ -95,7 +95,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="255dp"
         android:layout_marginRight="255dp"
-        android:text="View Attedence"
+        android:text="View Time Table"
         android:textColor="#0C0C0C"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"

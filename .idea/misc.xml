@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/New_attendance_management2/app/src/main/res/drawable/button_back.xml" value="0.2526041666666667" />
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/New_attendance_management2/app/src/main/res/layout/activity_add_holiday.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Nikhil/AndroidStudioProjects/New_attendance_management2/app/src/main/res/layout/activity_admin_mainpage.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Nikhil/AndroidStudioProjects/New_attendance_management2/app/src/main/res/layout/activity_admin_settimetable.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/New_attendance_management2/app/src/main/res/layout/activity_disp_holiday.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/New_attendance_management2/app/src/main/res/layout/activity_main.xml" value="0.23282051282051283" />
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/New_attendance_management2/app/src/main/res/layout/activity_manage_student.xml" value="0.23645833333333333" />
@@ -12,8 +14,11 @@
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/New_attendance_management2/app/src/main/res/layout/activity_student_dashbord.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/New_attendance_management2/app/src/main/res/layout/activity_student_login.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/New_attendance_management2/app/src/main/res/layout/activity_view_hoilday_student.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Nikhil/AndroidStudioProjects/New_attendance_management2/app/src/main/res/layout/activity_view_leave_application_admin.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/New_attendance_management2/app/src/main/res/layout/activity_view_leave_student.xml" value="0.22239583333333332" />
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/New_attendance_management2/app/src/main/res/layout/activity_view_notice_student.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Nikhil/AndroidStudioProjects/New_attendance_management2/app/src/main/res/layout/app_bar_admin_mainpage.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Nikhil/AndroidStudioProjects/New_attendance_management2/app/src/main/res/layout/content_admin_mainpage.xml" value="0.23645833333333333" />
       </map>
     </option>
   </component>
