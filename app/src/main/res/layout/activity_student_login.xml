@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentLogin"
+    android:background="@drawable/ic_background"
+    android:orientation="vertical">>
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_width="90dp"
+        android:layout_height="70dp"
+        android:layout_gravity="right"
+        android:src="@drawable/logo"
+        android:transitionName="logo_image"/>
+
+    <LinearLayout
+        android:background="@drawable/backgroundcorners"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/jost"
+            android:gravity="center"
+            android:shadowColor="#000000"
+            android:shadowDx="0"
+            android:shadowDy="4"
+            android:shadowRadius="5"
+            android:text="Sign In as Student"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"/>
+        <EditText
+            android:id="@+id/username_et"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="text"
+            android:drawableStart="@android:drawable/sym_action_email"
+            android:padding="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:drawablePadding="15dp"
+            android:textColor="@color/white"
+            android:hint="Email"
+            android:fontFamily="@font/rockwell"
+            android:background="@drawable/edittext_back"/>
+
+     <!--   <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password_et"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:textColorHint="#857E7E"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="Password"
+                app:passwordToggleEnabled="true"
+                android:inputType="textPassword"
+                android:drawableStart="@drawable/ic_password"
+                android:padding="10dp"
+                android:fontFamily="@font/rockwell"
+                android:background="@drawable/edittext_back"
+                android:drawablePadding="15dp"
+                android:textColor="@color/white" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password_et"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            app:passwordToggleEnabled="true">
+
+        </EditText>
+
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Login"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_back"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:text="Don't have account?Contact Admin"
+            android:textColor="@android:color/white"
+            android:gravity="center" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_margin="6dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot/Reset Password ? "
+                android:textColor="@android:color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Click Here"
+                android:textStyle="italic"
+                android:textColor="@android:color/holo_red_light"
+                android:id="@+id/forgetpass_tv"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
