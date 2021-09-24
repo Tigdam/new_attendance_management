@@ -16,7 +16,6 @@ public class student_dashbord extends AppCompatActivity {
         setContentView(R.layout.activity_student_dashbord);
 
         Hoilday_imageView = findViewById(R.id.v_pubholiday);
-        //Profile_imageView = findViewById(R.id.v_profile);
         Attendance_imageView = findViewById(R.id.v_attendence);
         Notice_imageView = findViewById(R.id.v_notice);
         Leave_imageView = findViewById(R.id.v_leave);
