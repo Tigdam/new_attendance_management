@@ -5,7 +5,14 @@ public class model {
 
     public model() {
     }
-
+    @Override
+    public String toString() {
+        return "model{" +
+                "HolidayTo='" + HolidayTo + '\'' +
+                ", HolidayFrom='" + HolidayFrom + '\'' +
+                ", HolidayDes='" + HolidayDes + '\'' +
+                '}';
+    }
     public model(String holidayTo, String holidayFrom, String holidayDes) {
         HolidayTo = holidayTo;
         HolidayFrom = holidayFrom;

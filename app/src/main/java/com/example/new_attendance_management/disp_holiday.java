@@ -17,6 +17,7 @@ public class disp_holiday extends AppCompatActivity {
     RecyclerView recview;
     myadapter adapter;
     FloatingActionButton fb;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,14 +25,25 @@ public class disp_holiday extends AppCompatActivity {
 
         recview = (RecyclerView) findViewById(R.id.recview);
         recview.setLayoutManager(new LinearLayoutManager(this));
-
         FirebaseRecyclerOptions<model> options =
                 new FirebaseRecyclerOptions.Builder<model>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("students"), model.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Holidays"), model.class)
                         .build();
 
         adapter = new myadapter(options);
         recview.setAdapter(adapter);
+
+
+
+        /*recview.setLayoutManager(new LinearLayoutManager(this));
+        FirebaseRecyclerOptions<model> options =
+                new FirebaseRecyclerOptions.Builder<model>()
+
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Hoildays"),model.class)
+                        .setLifecycleOwner(this)
+                        .build();
+        adapter= new myadapter(options,this);
+        recview.setAdapter(adapter);*/
 
         fb=(FloatingActionButton)findViewById(R.id.fadd);
         fb.setOnClickListener(new View.OnClickListener() {
@@ -53,4 +65,6 @@ public class disp_holiday extends AppCompatActivity {
         super.onStop();
         adapter.stopListening();
     }
+
+
 }

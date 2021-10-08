@@ -12,8 +12,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class viewHoilday_Student extends AppCompatActivity {
 
-    RecyclerView recview;
-    myadapterHoliday adapter;
+    RecyclerView recyclerView;
+    hAdaptor adapter;
 
 
     @Override
@@ -21,20 +21,23 @@ public class viewHoilday_Student extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_hoilday_student);
 
-        recview = (RecyclerView) findViewById(R.id.recview);
-        recview.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView = (RecyclerView) findViewById(R.id.recycleStudent);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        FirebaseRecyclerOptions<model> options =
-                new FirebaseRecyclerOptions.Builder<model>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("students"), model.class)
-                        .build();
 
-        adapter = new myadapterHoliday(options);
-        recview.setAdapter(adapter);
+
+
+            FirebaseRecyclerOptions<model> options =
+                    new FirebaseRecyclerOptions.Builder<model>()
+                            .setQuery(FirebaseDatabase.getInstance().getReference().child("Holidays"), model.class)
+                            .build();
+
+            adapter = new hAdaptor(options);
+        recyclerView.setAdapter(adapter);
 
 
     }
-    @Override
+   @Override
     protected void onStart() {
         super.onStart();
         adapter.startListening();
@@ -42,7 +45,8 @@ public class viewHoilday_Student extends AppCompatActivity {
 
     @Override
     protected void onStop() {
-        super.onStop();
-        adapter.stopListening();
-    }
+            super.onStop();
+            adapter.stopListening();
+        }
+
 }

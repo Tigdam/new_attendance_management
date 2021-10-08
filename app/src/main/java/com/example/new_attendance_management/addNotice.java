@@ -20,12 +20,15 @@ import java.util.HashMap;
 public class addNotice extends AppCompatActivity {
     private EditText t1,d1;
     private Button b1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_notice);
+
         t1= findViewById(R.id.title);
         d1= findViewById(R.id.description);
+
         b1= findViewById(R.id.btn_save);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override

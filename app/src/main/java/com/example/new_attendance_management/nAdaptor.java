@@ -28,12 +28,7 @@ import java.util.Map;
 
 public class nAdaptor extends FirebaseRecyclerAdapter<nList, nAdaptor.PastViewHolder> {
     private Context context;
-    /**
-     * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
-     * {@link FirebaseRecyclerOptions} for configuration options.
-     *
-     * @param options
-     */
+
     public nAdaptor(@NonNull FirebaseRecyclerOptions<nList> options, Context context) {
         super(options);
         this.context=context;
@@ -57,6 +52,7 @@ public class nAdaptor extends FirebaseRecyclerAdapter<nList, nAdaptor.PastViewHo
                         });
             }
         });
+
         holder.update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -108,7 +104,7 @@ public class nAdaptor extends FirebaseRecyclerAdapter<nList, nAdaptor.PastViewHo
 
     }
 
-    class PastViewHolder extends RecyclerView.ViewHolder{
+    static class PastViewHolder extends RecyclerView.ViewHolder{
         TextView title,description;
         ImageView delete,add,update;
 

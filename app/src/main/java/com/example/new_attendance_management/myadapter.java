@@ -1,31 +1,29 @@
 package com.example.new_attendance_management;
 
-import android.app.AlertDialog;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-
 import android.widget.TextView;
-
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.FirebaseDatabase;
 import com.orhanobut.dialogplus.DialogPlus;
-
 import com.orhanobut.dialogplus.ViewHolder;
 
 import java.util.HashMap;
 import java.util.Map;
+
+
+
 
 
 public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewholder>
@@ -71,7 +69,7 @@ public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewhol
                 map.put("HolidayFrom",updateFrm.getText().toString());
                 map.put("HolidayDes",updateDes.getText().toString());
 
-                FirebaseDatabase.getInstance().getReference().child("students")
+                FirebaseDatabase.getInstance().getReference().child("Holidays")
                         .child(getRef(position).getKey()).updateChildren(map)
                         .addOnSuccessListener(aVoid -> dialogPlus.dismiss())
                         .addOnFailureListener(e -> dialogPlus.dismiss());
@@ -82,18 +80,15 @@ public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewhol
 
 
         holder.delete.setOnClickListener(view -> {
-            AlertDialog.Builder builder=new AlertDialog.Builder(holder.to.getContext());
-            builder.setTitle("Delete Panel");
-            builder.setMessage("Delete?");
+            FirebaseDatabase.getInstance().getReference().child("Holidays")
+                    .child(getRef(0).getKey())
+                    .removeValue()
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
 
-            builder.setPositiveButton("Yes", (dialogInterface, i) -> FirebaseDatabase.getInstance().getReference().child("students")
-                    .child(getRef(position).getKey()).removeValue());
-
-            builder.setNegativeButton("No", (dialogInterface, i) -> {
-
-            });
-
-            builder.show();
+                        }
+                    });
         });
 
     } // End of OnBindViewMethod

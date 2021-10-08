@@ -46,18 +46,6 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/w_rectangle"
-                android:fontFamily="@font/jost"
-                android:paddingLeft="20dp"
-                android:hint="Title"
-                android:textColor="@color/black"
-                android:id="@+id/TitleHoliday"
-                android:textSize="15sp" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:fontFamily="@font/jost"
                 android:hint="Description"
                 android:textColor="@color/black"
@@ -97,7 +85,7 @@
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/datefrom"
                         android:layout_width="253dp"
                         android:layout_height="33dp"
@@ -108,7 +96,7 @@
                         android:focusable="false"
                         android:gravity="center_horizontal"
                         android:hint="DD/MM/YYYY"
-                        android:inputType="date"></EditText>
+                        android:inputType="date"></TextView>
 
                 </TableRow>
 
@@ -128,7 +116,7 @@
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
-                    <EditText
+                    <TextView
                         android:layout_width="253dp"
                         android:layout_height="33dp"
                         android:id="@+id/dateto"
@@ -139,7 +127,7 @@
                         android:hint="DD/MM/YYYY"
                         android:inputType="date"
                         android:focusable="false"
-                        android:gravity="center_horizontal"></EditText>
+                        android:gravity="center_horizontal"></TextView>
 
                 </TableRow>
 
