@@ -19,6 +19,15 @@
             android:name=".addNotice"
             android:exported="true" />
         <activity
+            android:name=".student_timetable"
+            android:exported="true" />
+        <activity
+            android:name=".student_timetable_home"
+            android:exported="true" />
+        <activity
+            android:name=".Timetable"
+            android:exported="true" />
+        <activity
             android:name=".admin_settimetable"
             android:exported="true" />
         <activity

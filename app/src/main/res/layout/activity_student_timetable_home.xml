@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/student_back"
-    tools:context=".admin_settimetable">
+    tools:context=".student_timetable_home">
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="90dp"

@@ -7,13 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class admin_settimetable extends AppCompatActivity {
+public class student_timetable_home extends AppCompatActivity {
     private Button fy,sy,ty;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_settimetable);
+        setContentView(R.layout.activity_student_timetable_home);
         fy=(Button) findViewById(R.id.btn_fymca);
         sy=(Button) findViewById(R.id.btn_symca);
         ty=(Button)findViewById(R.id.btn_tymca);
@@ -21,7 +20,7 @@ public class admin_settimetable extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String fy="FYMCA";
-                Intent intent = new Intent(admin_settimetable.this,Timetable.class);
+                Intent intent = new Intent(student_timetable_home.this,student_timetable.class);
                 intent.putExtra("mca",fy);
                 startActivity(intent);
 
@@ -32,7 +31,7 @@ public class admin_settimetable extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String sy="SYMCA";
-                Intent intent = new Intent(admin_settimetable.this,Timetable.class);
+                Intent intent = new Intent(student_timetable_home.this,student_timetable.class);
                 intent.putExtra("mca",sy);
                 startActivity(intent);
 
@@ -42,7 +41,7 @@ public class admin_settimetable extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String ty="TYMCA";
-                Intent intent = new Intent(admin_settimetable.this,Timetable.class);
+                Intent intent = new Intent(student_timetable_home.this,student_timetable.class);
                 intent.putExtra("mca",ty);
                 startActivity(intent);
             }

@@ -10,7 +10,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class student_dashbord extends AppCompatActivity {
 
-    ImageView Hoilday_imageView, Profile_imageView,Attendance_imageView,Notice_imageView,Leave_imageView,exit;
+    ImageView Hoilday_imageView, Profile_imageView,timetable_imageView,Notice_imageView,Leave_imageView,exit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class student_dashbord extends AppCompatActivity {
         setContentView(R.layout.activity_student_dashbord);
 
         Hoilday_imageView = findViewById(R.id.v_pubholiday);
-        Attendance_imageView = findViewById(R.id.v_attendence);
+        timetable_imageView = findViewById(R.id.v_Timetable);
         Notice_imageView = findViewById(R.id.v_notice);
         Leave_imageView = findViewById(R.id.v_leave);
         exit = findViewById(R.id.imageView);
@@ -26,6 +26,10 @@ public class student_dashbord extends AppCompatActivity {
 
         Hoilday_imageView.setOnClickListener(v -> {
             startActivity(new Intent(student_dashbord.this, viewHoilday_Student.class));
+        });
+
+        timetable_imageView.setOnClickListener(v -> {
+            startActivity(new Intent(student_dashbord.this, student_timetable_home.class));
         });
 
         Notice_imageView.setOnClickListener(v -> {
