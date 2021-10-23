@@ -87,6 +87,10 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:fontFamily="@font/rockwell"
+            android:paddingLeft="50dp"
             android:id="@+id/password_et"
             android:layout_marginTop="15dp"
             android:layout_marginRight="10dp"
