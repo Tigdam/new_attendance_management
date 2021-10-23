@@ -161,7 +161,7 @@
             <LinearLayout
                 android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
-                android:id="@+id/viewattendance_btn"
+                android:id="@+id/viewleaveapp_btn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
@@ -180,7 +180,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
-                    android:text="View Attendance"/>
+                    android:text="View Leave Applications"/>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/addholiday_btn"

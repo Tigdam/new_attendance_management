@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".admin_view_LeaveApp"
+            android:exported="true" />
+        <activity
+            android:name=".admin_timetable"
+            android:exported="true" />
+        <activity
             android:name=".NoticeList"
             android:exported="true" />
         <activity

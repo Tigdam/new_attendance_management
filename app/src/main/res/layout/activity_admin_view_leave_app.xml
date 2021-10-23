@@ -4,22 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".viewNotice_Student"
+    tools:context=".admin_view_LeaveApp"
     android:background="@drawable/student_back2">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="50dp"
         android:textSize="26dp"
-        android:text="Notice Module"></TextView>
+        android:text="Leave Application"></TextView>
+
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclestd"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/levaeRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />

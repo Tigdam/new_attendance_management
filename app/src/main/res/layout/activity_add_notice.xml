@@ -73,79 +73,7 @@
                 android:elevation="4dp"
                 />
 
-            <TableLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/w_rectangle2"
-                android:layout_gravity="center_horizontal"
-                android:paddingLeft="15dp">
 
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/jost"
-                        android:gravity="top"
-                        android:paddingTop="15dp"
-                        android:text="From"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                    <EditText
-                        android:id="@+id/datefrom"
-                        android:layout_width="253dp"
-                        android:layout_height="33dp"
-                        android:layout_marginLeft="20dp"
-                        android:background="@drawable/g_rectangle"
-                        android:calendarTextColor="@color/white"
-                        android:ems="10"
-                        android:focusable="false"
-                        android:gravity="center_horizontal"
-                        android:hint="DD/MM/YYYY"
-                        android:inputType="date"></EditText>
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/jost"
-                        android:gravity="top"
-                        android:paddingTop="15dp"
-                        android:text="To"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                    <EditText
-                        android:layout_width="253dp"
-                        android:layout_height="33dp"
-                        android:id="@+id/dateto"
-                        android:calendarTextColor="@color/white"
-                        android:layout_marginLeft="20dp"
-                        android:background="@drawable/g_rectangle"
-                        android:ems="10"
-                        android:hint="DD/MM/YYYY"
-                        android:inputType="date"
-                        android:focusable="false"
-                        android:gravity="center_horizontal"></EditText>
-
-                </TableRow>
-
-
-            </TableLayout>
 
 
 

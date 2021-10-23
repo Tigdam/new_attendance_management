@@ -2,19 +2,28 @@ package com.example.new_attendance_management;
 
 public class UserHelperClass {
 
-    String title, des, type_of_leave, toDate, fromDate, name, url;
+    String n, title, des, type_of_leave, toDate, fromDate, name, url;
 
     public UserHelperClass(String toString, String toString1) {
         this.name = name;
         this.url = url;
     }
 
-    public UserHelperClass(String title, String des, String typ_of_leave, String fromDate, String toDate) {
+    public UserHelperClass(String n,String title, String des, String typ_of_leave, String fromDate, String toDate) {
+        this.n = n;
         this.title = title;
         this.des = des;
         this.type_of_leave = type_of_leave;
         this.toDate = toDate;
         this.fromDate = fromDate;
+    }
+
+    public String getN() {
+        return n;
+    }
+
+    public void setN(String n) {
+        this.n = n;
     }
 
     public String getTitle() {
@@ -74,6 +83,14 @@ public class UserHelperClass {
     }
 
     public UserHelperClass() {
+    }
+    @Override
+    public String toString() {
+        return "UserHelperClass{" +
+                "n='" + n + '\'' +
+                "title='" + title + '\'' +
+                ", des='" + des + '\'' +
+                '}';
     }
 
 

@@ -113,6 +113,19 @@ public class addHoliday extends AppCompatActivity {
                 map.put("HolidayFrom",holidayFrom.getText().toString());
                 map.put("HolidayDes",holidayDes.getText().toString());
 
+                String hd = holidayDes.getText().toString();
+                String ht = holidayDes.getText().toString();
+                String hf = holidayDes.getText().toString();
+                if(hd.isEmpty()){
+                    holidayDes.setError("Description is required");
+                    holidayDes.requestFocus();
+                    return;
+                }
+                if(ht.isEmpty()) {
+                    holidayTo.setError("To Date is required");
+                    holidayTo.requestFocus();
+                }
+
 
                 FirebaseDatabase.getInstance().getReference().child("Holidays").push()
                         .setValue(map)

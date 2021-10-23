@@ -24,5 +24,4 @@
     <include layout="@layout/content_admin_mainpage" />
 
 
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -52,7 +52,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class admin_mainpage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     String tid;
-    LinearLayout addstubtn,addfacbtn,addsubbtn,addholdy,settimetable,addnotice;
+    LinearLayout addstubtn,addfacbtn,addsubbtn,addholdy,settimetable,addnotice, viewLeaveBtn;
     CircleImageView admin_nav_image;
 
     private TextView nav_name,name_tv;
@@ -99,6 +99,12 @@ public class admin_mainpage extends AppCompatActivity
         addholdy = findViewById(R.id.addholiday_btn);
         addnotice =findViewById(R.id.viewleave_btn);
         settimetable = findViewById(R.id.settimetable_btn);
+
+        viewLeaveBtn = findViewById(R.id.viewleaveapp_btn);
+        viewLeaveBtn.setOnClickListener(v -> {
+            startActivity(new Intent(admin_mainpage.this, admin_view_LeaveApp.class));
+        });
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

@@ -9,23 +9,23 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class viewNotice_Student extends AppCompatActivity {
+public class admin_view_LeaveApp extends AppCompatActivity {
     private RecyclerView recyclerView;
-    private sAdaptor adapter;
+    private leaveAdaptor adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_notice_student);
+        setContentView(R.layout.activity_admin_view_leave_app);
 
-        recyclerView= findViewById(R.id.recyclestd);
+        recyclerView= findViewById(R.id.levaeRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        FirebaseRecyclerOptions<nList> options =
-                new FirebaseRecyclerOptions.Builder<nList>()
+        FirebaseRecyclerOptions<UserHelperClass> options =
+                new FirebaseRecyclerOptions.Builder<UserHelperClass>()
 
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Notice"),nList.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("leaveApplication"),UserHelperClass.class)
                         .setLifecycleOwner(this)
                         .build();
-        nAdaptor adapter= new nAdaptor(options,this);
+        leaveAdaptor adapter= new leaveAdaptor(options,this);
         recyclerView.setAdapter(adapter);
     }
 }

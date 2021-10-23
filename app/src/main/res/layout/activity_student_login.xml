@@ -91,6 +91,10 @@
             android:layout_marginTop="15dp"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:fontFamily="@font/rockwell"
+            android:paddingLeft="50dp"
             app:passwordToggleEnabled="true">
 
         </EditText>

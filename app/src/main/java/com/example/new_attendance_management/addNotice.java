@@ -36,6 +36,18 @@ public class addNotice extends AppCompatActivity {
                 HashMap<String,Object> map=new HashMap<>();
                 map.put("Title",t1.getText().toString());
                 map.put("Description",d1.getText().toString());
+                String t=t1.getText().toString();
+                String d=d1.getText().toString();
+                if(t.isEmpty()){
+                    t1.setError("Title is required");
+                    t1.requestFocus();
+                    return;
+                }
+                if(d.isEmpty()){
+                    d1.setError("Description is required");
+                    d1.requestFocus();
+                    return;
+                }
                 FirebaseDatabase.getInstance().getReference().child("Notice").push()
                         .setValue(map)
                         .addOnCompleteListener(new OnCompleteListener<Void>() {

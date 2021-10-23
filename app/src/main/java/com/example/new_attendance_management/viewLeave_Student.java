@@ -28,7 +28,7 @@ public class viewLeave_Student extends AppCompatActivity {
     private int mYear, mMonth, mDay;
     Button button, pdfup;
     //mHour, mMinute;
-    EditText leave_title, description, type_of_leave;
+    EditText leave_title, description, type_of_leave,nametxt;
     TextView attach_file;
 
     private final int PICK_PDF_CODE = 2342;
@@ -48,6 +48,8 @@ public class viewLeave_Student extends AppCompatActivity {
         description = findViewById(R.id.description);
         type_of_leave = findViewById(R.id.TypeOfLeave);
         attach_file = findViewById(R.id.attach_file);
+
+        nametxt = findViewById(R.id.TitleNameLeave);
 
         button =  findViewById(R.id.btn);
         pdfup = findViewById(R.id.pdf_up);
@@ -179,12 +181,36 @@ public class viewLeave_Student extends AppCompatActivity {
 
     private void firebase() {
 
-
+        String n=nametxt.getText().toString();
         String fromDate = selectTime.getText().toString();
         String toDate = selectDate.getText().toString();
         String title = leave_title.getText().toString();
         String des = description.getText().toString();
         String typ_of_leave = type_of_leave.getText().toString();
+
+
+
+        if(n.isEmpty()){
+            nametxt.setError("Name is required");
+            nametxt.requestFocus();
+            return;
+        }
+
+        if(title.isEmpty()){
+            leave_title.setError("Title is required");
+            leave_title.requestFocus();
+            return;
+        }
+        if(des.isEmpty()){
+            description.setError("Description is required");
+            description.requestFocus();
+            return;
+        }
+        if(typ_of_leave.isEmpty()){
+            type_of_leave.setError("Leave Type is required");
+            type_of_leave.requestFocus();
+            return;
+        }
 
 
 
@@ -203,8 +229,11 @@ public class viewLeave_Student extends AppCompatActivity {
 
 
 
-        UserHelperClass helperClass = new UserHelperClass(title, des, typ_of_leave, fromDate, toDate);
-        databaseReference.child(title).setValue(helperClass);
+        UserHelperClass helperClass = new UserHelperClass(n,title, des, typ_of_leave, fromDate, toDate);
+        databaseReference.child(n).setValue(helperClass);
+
+        Toast.makeText(viewLeave_Student.this, "Successfully Added ", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(viewLeave_Student.this, student_dashbord.class));
     }
 
 }
