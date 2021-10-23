@@ -25,7 +25,7 @@ public class viewNotice_Student extends AppCompatActivity {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Notice"),nList.class)
                         .setLifecycleOwner(this)
                         .build();
-        nAdaptor adapter= new nAdaptor(options,this);
+        sAdaptor adapter= new sAdaptor(options,this);
         recyclerView.setAdapter(adapter);
     }
 }
