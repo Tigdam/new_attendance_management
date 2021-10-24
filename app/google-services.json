@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "316655662680",
+    "firebase_url": "https://student-mamagment-app-default-rtdb.firebaseio.com",
+    "project_id": "student-mamagment-app",
+    "storage_bucket": "student-mamagment-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316655662680:android:7ecf17192fa40f97f7bc2d",
+        "android_client_info": {
+          "package_name": "com.example.new_attendance_management"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "316655662680-u25moqe6h31s95ubpnt0655vp93vr5dk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.new_attendance_management",
+            "certificate_hash": "c6c6ff937fe525bb89130c5c10f4c7538ed5d5c1"
+          }
+        },
+        {
+          "client_id": "316655662680-npco59f2fics0u70lk7smjbsto7ib69j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVxTOxJM3-LLaISH5EOf-mt3vrF4HU9I0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "316655662680-npco59f2fics0u70lk7smjbsto7ib69j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
